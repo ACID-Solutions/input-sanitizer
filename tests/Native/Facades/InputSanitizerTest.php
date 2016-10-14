@@ -13,7 +13,7 @@
 
 namespace Acid\InputSanitizer\tests\Native\Facades;
 
-use Acid\InputSanitizer\Native\InputSanitizer;
+use Acid\InputSanitizer\Native\Facades\InputSanitizer;
 use Acid\InputSanitizer\Native\InputSanitizerBootstrapper;
 use PHPUnit_Framework_TestCase;
 
