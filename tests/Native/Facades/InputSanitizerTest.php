@@ -40,9 +40,11 @@ class InputSanitizerBootstrapperTest extends PHPUnit_Framework_TestCase
 
     public function testCallMethods()
     {
-        $this->assertTrue('true');
-        $this->assertTrue(null, true);
-        $this->assertTrue(null, true, true);
-        $this->assertTrue(null, true, true, 'extra_param');
+        $facade = new InputSanitizer();
+
+        $this->assertTrue($facade::sanitize('true'));
+        $this->assertTrue($facade::sanitize(null, true));
+        $this->assertTrue($facade::sanitize(null, true, true));
+        $this->assertTrue($facade::sanitize(null, true, true, 'extra_param'));
     }
 }
