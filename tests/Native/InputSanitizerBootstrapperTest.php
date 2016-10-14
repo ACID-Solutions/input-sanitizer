@@ -11,7 +11,7 @@
  * @link       http://acid.fr
  */
 
-namespace Acid\InputSanitizer\tests;
+namespace Acid\InputSanitizer\tests\Native;
 
 use Acid\InputSanitizer\Native\InputSanitizerBootstrapper;
 use PHPUnit_Framework_TestCase;
