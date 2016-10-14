@@ -11,7 +11,7 @@
  * @link       http://acid.fr
  */
 
-namespace Acid\InputtSanitizer\Laravel;
+namespace Acid\InputSanitizer\Laravel;
 
 use Illuminate\Support\ServiceProvider;
 
