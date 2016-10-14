@@ -1,0 +1,42 @@
+{
+  "name": "acid/input-sanitizer",
+  "description": "Input sanitizer to convert strings to booleans, numbers etc.",
+  "keywords": [
+    "acid",
+    "package",
+    "input",
+    "clean",
+    "sanitize",
+    "santizer",
+    "php",
+    "laravel",
+    "codeigniter",
+    "fuelphp"
+  ],
+  "homepage": "https://github.com/ACID-Solutions/input-sanitizer",
+  "license": "MIT",
+  "authors": [
+    {
+      "name": "Arthur Lorent",
+      "email": "arthur.lorent@gmail.com",
+      "role": "Developer"
+    },
+    {
+      "name": "Daniel Lucas",
+      "email": "daniel.chris.lucas@gmail.com",
+      "role": "Developer"
+    }
+  ],
+  "require": {
+    "php": "^5.6 | ^7.0",
+    "illuminate/support": "~5.0"
+  },
+  "require-dev": {
+  },
+  "autoload": {
+    "psr-4": {
+      "Acid\\InputSanitizer\\": "src/"
+    }
+  },
+  "minimum-stability": "stable"
+}
