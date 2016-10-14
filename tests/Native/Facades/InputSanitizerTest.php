@@ -21,10 +21,10 @@ class InputSanitizerBootstrapperTest extends PHPUnit_Framework_TestCase
 {
     public function testIntantiate()
     {
-        $bootstrapper = new InputSanitizer();
+        $facade = new InputSanitizer();
 
         // $inputSanitizer = $bootstrapper->createInputSanitizer();
 
-        $this->assertInstanceOf(\Acid\InputSanitizer\InputSanitizer::class, $inputSanitizer);
+        $this->assertInstanceOf(\Acid\InputSanitizer\InputSanitizer::class, $facade->getInputSanitizer());
     }
 }
