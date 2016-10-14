@@ -37,4 +37,12 @@ class InputSanitizerBootstrapperTest extends PHPUnit_Framework_TestCase
         $facade = new InputSanitizer();
         $this->assertInstanceOf(\Acid\InputSanitizer\Native\Facades\InputSanitizer::class, $facade->instance());
     }
+
+    public function testCallMethods()
+    {
+        $this->assertTrue('true');
+        $this->assertTrue(null, true);
+        $this->assertTrue(null, true, true);
+        $this->assertTrue(null, true, true, 'extra_param');
+    }
 }

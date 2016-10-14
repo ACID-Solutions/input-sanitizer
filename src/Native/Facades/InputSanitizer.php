@@ -86,9 +86,6 @@ class InputSanitizer
         $instance = static::instance()->getInputSanitizer();
 
         switch (count($args)) {
-            case 0:
-                return $instance->{$method}();
-
             case 1:
                 return $instance->{$method}($args[0]);
 
