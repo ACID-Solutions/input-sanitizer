@@ -11,9 +11,9 @@
  * @link       https://acid.fr
  */
 
-namespace Acid\InputSanitizer\tests\Native;
+namespace AcidSolutions\InputSanitizer\tests\Native;
 
-use Acid\InputSanitizer\Native\InputSanitizerBootstrapper;
+use AcidSolutions\InputSanitizer\Native\InputSanitizerBootstrapper;
 use PHPUnit_Framework_TestCase;
 
 class InputSanitizerBootstrapperTest extends PHPUnit_Framework_TestCase
@@ -24,6 +24,6 @@ class InputSanitizerBootstrapperTest extends PHPUnit_Framework_TestCase
 
         $inputSanitizer = $bootstrapper->createInputSanitizer();
 
-        $this->assertInstanceOf(\Acid\InputSanitizer\InputSanitizer::class, $inputSanitizer);
+        $this->assertInstanceOf(\AcidSolutions\InputSanitizer\InputSanitizer::class, $inputSanitizer);
     }
 }

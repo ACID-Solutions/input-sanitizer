@@ -11,12 +11,12 @@
  * @link       https://acid.fr
  */
 
-namespace Acid\InputSanitizer\tests;
+namespace AcidSolutions\InputSanitizer\tests;
 
-use Acid\InputSanitizer\InputSanitizer;
+use AcidSolutions\InputSanitizer\InputSanitizer;
 use PHPUnit_Framework_TestCase;
 
-class InputSanitizerHelperTest extends PHPUnit_Framework_TestCase
+class InputSanitizerTest extends PHPUnit_Framework_TestCase
 {
     private $inputSanitizer;
 

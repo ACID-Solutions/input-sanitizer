@@ -11,10 +11,10 @@
  * @link       https://acid.fr
  */
 
-namespace Acid\InputSanitizer\tests\Native\Facades;
+namespace AcidSolutions\InputSanitizer\tests\Native\Facades;
 
-use Acid\InputSanitizer\Native\Facades\InputSanitizer;
-use Acid\InputSanitizer\Native\InputSanitizerBootstrapper;
+use AcidSolutions\InputSanitizer\Native\Facades\InputSanitizer;
+use AcidSolutions\InputSanitizer\Native\InputSanitizerBootstrapper;
 use PHPUnit_Framework_TestCase;
 
 class InputSanitizerBootstrapperTest extends PHPUnit_Framework_TestCase
@@ -22,20 +22,20 @@ class InputSanitizerBootstrapperTest extends PHPUnit_Framework_TestCase
     public function testIntantiate()
     {
         $facade = new InputSanitizer();
-        $this->assertInstanceOf(\Acid\InputSanitizer\InputSanitizer::class, $facade->getInputSanitizer());
+        $this->assertInstanceOf(\AcidSolutions\InputSanitizer\InputSanitizer::class, $facade->getInputSanitizer());
     }
 
     public function testInstantiateWithBootstrapper()
     {
         $bootStrapper = new InputSanitizerBootstrapper();
         $facade = new InputSanitizer($bootStrapper);
-        $this->assertInstanceOf(\Acid\InputSanitizer\InputSanitizer::class, $facade->getInputSanitizer());
+        $this->assertInstanceOf(\AcidSolutions\InputSanitizer\InputSanitizer::class, $facade->getInputSanitizer());
     }
 
     public function testGetInstance()
     {
         $facade = new InputSanitizer();
-        $this->assertInstanceOf(\Acid\InputSanitizer\Native\Facades\InputSanitizer::class, $facade->instance());
+        $this->assertInstanceOf(\AcidSolutions\InputSanitizer\Native\Facades\InputSanitizer::class, $facade->instance());
     }
 
     public function testCallMethods()

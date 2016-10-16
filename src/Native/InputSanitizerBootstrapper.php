@@ -11,9 +11,9 @@
  * @link       https://acid.fr
  */
 
-namespace Acid\InputSanitizer\Native;
+namespace AcidSolutions\InputSanitizer\Native;
 
-use Acid\InputSanitizer\InputSanitizer;
+use AcidSolutions\InputSanitizer\InputSanitizer;
 
 class InputSanitizerBootstrapper
 {

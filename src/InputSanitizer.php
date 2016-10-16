@@ -11,7 +11,7 @@
  * @link       https://acid.fr
  */
 
-namespace Acid\InputSanitizer;
+namespace AcidSolutions\InputSanitizer;
 
 class InputSanitizer
 {

@@ -11,9 +11,10 @@
  * @link       https://acid.fr
  */
 
-namespace Acid\InputSanitizer\Laravel;
+namespace AcidSolutions\InputSanitizer\Laravel;
 
 use Illuminate\Support\ServiceProvider;
+use AcidSolutions\InputSanitizer\InputSanitizer;
 
 class InputSanitizerServiceProvider extends ServiceProvider
 {

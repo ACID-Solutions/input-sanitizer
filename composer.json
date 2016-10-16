@@ -1,5 +1,5 @@
 {
-  "name": "acid/input-sanitizer",
+  "name": "acid-solutions/input-sanitizer",
   "description": "Input sanitizer to convert strings to booleans, numbers etc.",
   "keywords": [
     "acid",
@@ -37,7 +37,7 @@
   },
   "autoload": {
     "psr-4": {
-      "Acid\\InputSanitizer\\": "src/"
+      "AcidSolutions\\InputSanitizer\\": "src/"
     }
   },
   "minimum-stability": "stable"

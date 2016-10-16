@@ -11,7 +11,9 @@
  * @link       https://acid.fr
  */
 
-namespace Acid\InputSanitizer\Laravel\Facades;
+use Illuminate\Support\Facades\Facade;
+
+namespace AcidSolutions\InputSanitizer\Laravel\Facades;
 
 class InputSanitizer extends Facade
 {
