@@ -16,6 +16,10 @@ This package simplifies the process drastically.
 
 Begin by installing this package through Composer.
 
+```bash
+    composer require acid-solutions/input-sanitizer
+```
+
 ```json
 {
     "require": {
@@ -36,7 +40,7 @@ In the `$providers` array add the following service provider for this package.
 
 'providers' => [
     '...',
-    Acid\InputSanitizer\Laravel\InputSanitizerServiceProvider::class
+    AcidSolutions\InputSanitizer\Laravel\InputSanitizerServiceProvider::class
 ];
 ```
 
@@ -47,7 +51,7 @@ In the `$aliases` array add the following facade for this package.
 
 'aliases' => [
     '...',
-    'InputSanitizer' => Acid\InputSanitizer\Laravel\Facades\InputSanitizer::class
+    'InputSanitizer' => AcidSolutions\InputSanitizer\Laravel\Facades\InputSanitizer::class
 ]
 ```
 
@@ -56,8 +60,8 @@ When this provider is booted, you'll gain access to a `InputSanitizer` facade, w
 ```php
 public function index()
 {
-    $input = Input::get('all');
-    $sanitizedInput = InputSanitizer::sanitize($input);
+    $inputs = $request->all();
+    $sanitizedInputs = InputSanitizer::sanitize($inputs);
 }
 ```
 
@@ -70,8 +74,6 @@ InputSanitizer ships with native implementations of the bootloader and facade. I
 ```php
 // Import the facade
 use Acid\InputSanitizer\Native\Facades\InputSanitizer;
-
-$inputSanitizer = new InputSanitizer;
 
 $input = ['false', '3', ''];
 $sanitizedInput = InputSanitizer::sanitize($input);
@@ -113,13 +115,16 @@ Example:
 
 ```php
 InputSanitizer::sanitize('', 'hello');
-// will produce 'hello'
+// will return 'hello'
 ```
 
 `$jsonDecodeAssoc` is used for decoding JSON. Internally it is used as so:
 
 ```
-$input = json_decode($input, $jsonDecodeAssoc);
+$jsonDecodeAssoc = true // default is false
+$input = json_decode($input, null, $jsonDecodeAssoc);
+// will decode your json as associative array (and as object if false)
+// see php json_decode documentation : http://php.net/manual/en/function.json-decode.php
 ```
 
 ## Credits
