@@ -83,6 +83,13 @@ $sanitizedInput = InputSanitizer::sanitize($input);
 
 The only public method in the package is `sanitize($input, $default = null, $jsonDecodeAssoc = false)`
 
+Call the sanitizer as following:
+
+```php
+$data = ['null', 'true'];
+$sanitized = InputSanitizer::sanitize($data);
+```
+
 `$input` can be a string, boolean, number, array, object or JSON string
 
 Examples of the cleaned data:
