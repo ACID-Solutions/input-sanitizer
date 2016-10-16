@@ -17,7 +17,7 @@ This package simplifies the process drastically.
 Begin by installing this package through Composer.
 
 ```bash
-    composer require acid-solutions/input-sanitizer
+composer require acid-solutions/input-sanitizer
 ```
 
 ```json
@@ -124,7 +124,7 @@ InputSanitizer::sanitize('', 'hello');
 $jsonDecodeAssoc = true // default is false
 $input = json_decode($input, null, $jsonDecodeAssoc);
 // will decode your json as associative array (and as object if false)
-// see php json_decode documentation : http://php.net/manual/en/function.json-decode.php
+// see php [json_decode documentation](http://php.net/manual/en/function.json-decode.php)
 ```
 
 ## Credits
