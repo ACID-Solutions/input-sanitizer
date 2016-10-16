@@ -118,7 +118,7 @@ InputSanitizer::sanitize('', 'hello');
 // will return 'hello'
 ```
 
-`$jsonDecodeAssoc` is used for decoding JSON. Internally it is used as so:
+`$jsonDecodeAssoc` is used for decoding JSON.  
 See php [json_decode documentation](http://php.net/manual/en/function.json-decode.php)
 
 ```
