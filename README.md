@@ -29,14 +29,93 @@ Begin by installing this package through Composer.
 If you are a Laravel user, there is a service provider you can make use of to automatically prepare the bindings and
 such.
 
-```php
+In the `$providers` array add the following service provider for this package.
 
+```php
 // config/app.php
 
 'providers' => [
     '...',
-    'ACID\InputSanitizer\Laravel\Facades\InputSanitizer'
+    Acid\InputSanitizer\Laravel\InputSanitizerServiceProvider::class
 ];
 ```
 
+In the `$aliases` array add the following facade for this package.
+
+```php
+// config/app.php
+
+'aliases' => [
+    '...',
+    'InputSanitizer' => Acid\InputSanitizer\Laravel\Facades\InputSanitizer::class
+]
+```
+
 When this provider is booted, you'll gain access to a `InputSanitizer` facade, which you may use in your controllers.
+
+```php
+public function index()
+{
+    $input = Input::get('all');
+    $sanitizedInput = InputSanitizer::sanitize($input);
+}
+```
+
+> In Laravel, of course add `use InputSanitizer;` to the top of your controller.
+
+## Without Laravel
+
+InputSanitizer ships with native implementations of the bootloader and facade. In order to use it import class.
+
+```php
+// Import the facade
+use Acid\InputSanitizer\Native\Facades\InputSanitizer;
+
+$inputSanitizer = new InputSanitizer;
+
+$input = ['false', '3', ''];
+$sanitizedInput = InputSanitizer::sanitize($input);
+
+// produces [false, 3, null]
+```
+
+## Usage
+
+The only public method in the package is `sanitize($input, $default = null, $jsonDecodeAssoc = false)`
+
+`$input` can be a string, boolean, number, array, object or JSON string
+
+Examples of the cleaned data:
+
+```php
+''      => null
+'null'  => null
+'false' => false
+'true'  => true
+'on'    => true
+'3'     => 3
+'5.07'  => 5.07
+```
+
+When using arrays and objects, the method will sanitize each element in the given input and return an array (or object)
+with the cleaned values.
+
+`$default` can be used to return a default value if the resulting cleaned input is `null` or `false`
+
+Example:
+
+```php
+InputSanitizer::sanitize('', 'hello');
+// will produce 'hello'
+```
+
+`$jsonDecodeAssoc` is used for decoding JSON. Internally it is used as so:
+
+```
+$input = json_decode($input, $jsonDecodeAssoc);
+```
+
+## Credits
+
+- [Arthur Lorent](https://github.com/Okipa)
+- [Daniel Lucas](https://github.com/daniel-chris-lucas)
