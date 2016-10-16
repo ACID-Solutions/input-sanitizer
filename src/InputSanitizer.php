@@ -26,9 +26,6 @@ class InputSanitizer
      */
     public function sanitize($entry, $default = null, $jsonDecodeAssoc = false)
     {
-        // we prepare the return variable
-        $return = null;
-
         // we remove useless spaces
         if (is_string($entry)) {
             $entry = trim($entry);
