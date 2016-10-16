@@ -8,7 +8,7 @@
  * @author     Arthur Lorent <authur.lorent@gmail.com>, Daniel Lucas <daniel.chris.lucas@gmail.com>
  * @license    MIT
  * @copyright  (c) 2006-2016, Acid Solutions SARL
- * @link       http://acid.fr
+ * @link       https://acid.fr
  */
 
 namespace Acid\InputSanitizer\tests\Native;
