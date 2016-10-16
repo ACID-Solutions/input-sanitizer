@@ -119,12 +119,12 @@ InputSanitizer::sanitize('', 'hello');
 ```
 
 `$jsonDecodeAssoc` is used for decoding JSON. Internally it is used as so:
+See php [json_decode documentation](http://php.net/manual/en/function.json-decode.php)
 
 ```
 $jsonDecodeAssoc = true // default is false
 $input = json_decode($input, null, $jsonDecodeAssoc);
 // will decode your json as associative array (and as object if false)
-// see php [json_decode documentation](http://php.net/manual/en/function.json-decode.php)
 ```
 
 ## Credits
