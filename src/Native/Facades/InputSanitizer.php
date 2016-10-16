@@ -20,14 +20,14 @@ class InputSanitizer
     /**
      * The InputSanitizer instance.
      *
-     * @var \Acid\InputSanitizer\InputSanitizer
+     * @var \AcidSolutions\InputSanitizer\InputSanitizer
      */
     protected $inputSanitizer;
 
     /**
      * The Native BootStrapper instance.
      *
-     * @var \Acid\InputSanitizer\Native\InputSanitizerBootstrapper
+     * @var \AcidSolutions\InputSanitizer\Native\InputSanitizerBootstrapper
      */
     protected static $instance;
 
@@ -35,8 +35,6 @@ class InputSanitizer
      * Constructor.
      *
      * @param \Acid\InputSanitizer\Native\InputSanitizerBootstrapper $bootstrapper
-     *
-     * @return void
      */
     public function __construct(InputSanitizerBootstrapper $bootstrapper = null)
     {
@@ -50,7 +48,7 @@ class InputSanitizer
     /**
      * Returns the InputSanitizer instance.
      *
-     * @return \Acid\InputSanitizer\InputSanitizer
+     * @return \AcidSolutions\InputSanitizer\InputSanitizer
      */
     public function getInputSanitizer()
     {
@@ -60,7 +58,7 @@ class InputSanitizer
     /**
      * Creates a new Native Bootstrapper instance.
      *
-     * @param \Acid\InputSanitizer\Native\InputSanitizerBootstrapper $bootstrapper
+     * @param \AcidSolutions\InputSanitizer\Native\InputSanitizerBootstrapper $bootstrapper
      *
      * @return void
      */

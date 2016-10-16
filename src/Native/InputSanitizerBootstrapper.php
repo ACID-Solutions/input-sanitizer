@@ -20,7 +20,7 @@ class InputSanitizerBootstrapper
     /**
      * Creates an InputSanitizer instance.
      *
-     * @return \Acid\InputSanitizer\InputSanitizer
+     * @return \AcidSolutions\InputSanitizer\InputSanitizer
      */
     public function createInputSanitizer()
     {
