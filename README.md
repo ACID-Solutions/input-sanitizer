@@ -4,7 +4,7 @@
 [![Latest Version](https://img.shields.io/github/release/ACID-Solutions/input-sanitizer.svg?style=flat-square)](https://github.com/ACID-Solutions/input-sanitizer/releases)
 [![Build Status](https://img.shields.io/travis/ACID-Solutions/input-sanitizer.svg?style=flat-square)](https://travis-ci.org/ACID-Solutions/input-sanitizer)
 [![Coverage Status](https://img.shields.io/scrutinizer/coverage/g/ACID-Solutions/input-sanitizer.svg?style=flat-square)](https://scrutinizer-ci.com/g/ACID-Solutions/input-sanitizer/code-structure)
-[![Quality Score](https://img.shields.io/scrutinizer/g/ACID-Solutions/input-sanitizer.svg?style=flat-square)](https://scrutinizer-ci.com/g/ACID-Solutions/input-sanitizer)
+[![SensioLabsInsight](https://insight.sensiolabs.com/projects/3c577754-9101-4473-abb2-50155ed67282/small.png)](https://insight.sensiolabs.com/projects/3c577754-9101-4473-abb2-50155ed67282)
 [![Total Downloads](https://img.shields.io/packagist/dt/ACID-Solutions/input-sanitizer.svg?style=flat-square)](https://packagist.org/packages/ACID-Solutions/input-sanitizer)
 
 Often when receiving data from a client in an API or from a form request, you'll find yourself running the same data
