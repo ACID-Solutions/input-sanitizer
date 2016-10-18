@@ -108,6 +108,21 @@ class InputSanitizerTest extends PHPUnit_Framework_TestCase
     }
 
     /**
+     * Test sanitize can handle objects
+     */
+    public function testSanitizeDoesntChangeObjects()
+    {
+        $object = new stdClass;
+        $object->one = 'true';
+        $object->two = '756';
+
+        $sanitized = InputSanitizer::sanitize($object);
+
+        $this->assertEquals('true', $sanitized->one);
+        $this->assertEquals('756', $sanitized->two);
+    }
+
+    /**
      * Test sanitize can handle JSON
      */
     public function testSanitizeCanHandleJson()

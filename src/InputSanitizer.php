@@ -113,7 +113,12 @@ class InputSanitizer
             return false;
         }
 
-        json_decode($string);
+        try {
+            json_decode($string);
+        } catch (\ErrorException $e) {
+            return false;
+        }
+        
         return (json_last_error() == JSON_ERROR_NONE);
     }
 }
