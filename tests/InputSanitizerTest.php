@@ -117,7 +117,7 @@ class InputSanitizerTest extends PHPUnit_Framework_TestCase
         $object->one = 'true';
         $object->two = '756';
 
-        $sanitized = InputSanitizer::sanitize($object);
+        $sanitized = $this->inputSanitizer->sanitize($object);
 
         $this->assertEquals('true', $sanitized->one);
         $this->assertEquals('756', $sanitized->two);
