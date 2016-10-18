@@ -15,6 +15,7 @@ namespace AcidSolutions\InputSanitizer\tests;
 
 use AcidSolutions\InputSanitizer\InputSanitizer;
 use PHPUnit_Framework_TestCase;
+use stdClass;
 
 class InputSanitizerTest extends PHPUnit_Framework_TestCase
 {
