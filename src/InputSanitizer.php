@@ -109,15 +109,11 @@ class InputSanitizer
      */
     private function isJson($string)
     {
-        if (is_array($string)) {
+        if (! is_string($string)) {
             return false;
         }
 
-        try {
-            json_decode($string);
-        } catch (\ErrorException $e) {
-            return false;
-        }
+        json_decode($string);
         
         return (json_last_error() == JSON_ERROR_NONE);
     }
