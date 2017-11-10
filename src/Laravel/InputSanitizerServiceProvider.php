@@ -3,18 +3,18 @@
 /**
  * Part of the InputSanitizer package.
  *
- * @package    InputSanitizer
- * @version    1.0.0
- * @author     Arthur Lorent <arthur.lorent@gmail.com>, Daniel Lucas <daniel.chris.lucas@gmail.com>
- * @license    MIT
- * @copyright  (c) 2006-2016, Acid Solutions SARL
- * @link       https://acid.fr
+ * @package        InputSanitizer
+ * @version        1.0.2
+ * @author         Arthur Lorent <arthur.lorent@gmail.com>, Daniel Lucas <daniel.chris.lucas@gmail.com>
+ * @license        MIT
+ * @copyright  (c) 2006-2017, ACID-Solutions SARL
+ * @link           https://acid.fr
  */
 
 namespace AcidSolutions\InputSanitizer\Laravel;
 
-use Illuminate\Support\ServiceProvider;
 use AcidSolutions\InputSanitizer\InputSanitizer;
+use Illuminate\Support\ServiceProvider;
 
 class InputSanitizerServiceProvider extends ServiceProvider
 {

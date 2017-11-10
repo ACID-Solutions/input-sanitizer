@@ -4,10 +4,10 @@
  * Part of the InputSanitizer package.
  *
  * @package    InputSanitizer
- * @version    1.0.0
- * @author     Arthur Lorent <authur.lorent@gmail.com>, Daniel Lucas <daniel.chris.lucas@gmail.com>
+ * @version    1.0.2
+ * @author     Arthur Lorent <arthur.lorent@gmail.com>, Daniel Lucas <daniel.chris.lucas@gmail.com>
  * @license    MIT
- * @copyright  (c) 2006-2016, Acid Solutions SARL
+ * @copyright  (c) 2006-2017, ACID-Solutions SARL
  * @link       https://acid.fr
  */
 

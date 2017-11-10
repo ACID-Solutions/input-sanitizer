@@ -3,12 +3,12 @@
 /**
  * Part of the InputSanitizer package.
  *
- * @package    InputSanitizer
- * @version    1.0.0
- * @author     Arthur Lorent <authur.lorent@gmail.com>, Daniel Lucas <daniel.chris.lucas@gmail.com>
- * @license    MIT
- * @copyright  (c) 2006-2016, Acid Solutions SARL
- * @link       https://acid.fr
+ * @package        InputSanitizer
+ * @version        1.0.2
+ * @author         Arthur Lorent <arthur.lorent@gmail.com>, Daniel Lucas <daniel.chris.lucas@gmail.com>
+ * @license        MIT
+ * @copyright  (c) 2006-2017, ACID-Solutions SARL
+ * @link           https://acid.fr
  */
 
 namespace AcidSolutions\InputSanitizer;
@@ -30,7 +30,6 @@ class InputSanitizer
         if (is_string($entry)) {
             $entry = trim($entry);
         }
-
         // we sanitize the value
         switch (true) {
             case $entry === '':
@@ -45,7 +44,7 @@ class InputSanitizer
                 $return = true;
                 break;
             case is_numeric($entry):
-                if (((int)$entry != $entry)) {
+                if (((int) $entry != $entry)) {
                     $return = doubleval($entry);
                 } else {
                     $return = intval($entry);
@@ -66,13 +65,11 @@ class InputSanitizer
                 $return = $entry;
                 break;
         };
-
         // if the value is null or false, return the default value
         if (isset($default) && !$return) {
             return $default;
         }
 
-        // we return the sanitized value
         return $return;
     }
 
@@ -96,7 +93,6 @@ class InputSanitizer
             }
         }
 
-        // we return the sanitized data
         return $return;
     }
 
@@ -109,12 +105,11 @@ class InputSanitizer
      */
     private function isJson($string)
     {
-        if (! is_string($string)) {
+        if (!is_string($string)) {
             return false;
         }
-
         json_decode($string);
-        
+
         return (json_last_error() == JSON_ERROR_NONE);
     }
 }

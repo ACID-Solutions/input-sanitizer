@@ -3,12 +3,12 @@
 /**
  * Part of the InputSanitizer package.
  *
- * @package    InputSanitizer
- * @version    1.0.0
- * @author     Arthur Lorent <arthur.lorent@gmail.com>, Daniel Lucas <daniel.chris.lucas@gmail.com>
- * @license    MIT
- * @copyright  (c) 2006-2016, Acid Solutions SARL
- * @link       https://acid.fr
+ * @package        InputSanitizer
+ * @version        1.0.2
+ * @author         Arthur Lorent <arthur.lorent@gmail.com>, Daniel Lucas <daniel.chris.lucas@gmail.com>
+ * @license        MIT
+ * @copyright  (c) 2006-2017, ACID-Solutions SARL
+ * @link           https://acid.fr
  */
 
 namespace AcidSolutions\InputSanitizer\Native\Facades;
@@ -23,18 +23,17 @@ class InputSanitizer
      * @var \AcidSolutions\InputSanitizer\InputSanitizer
      */
     protected $inputSanitizer;
-
     /**
      * The Native BootStrapper instance.
      *
-     * @var \AcidSolutions\InputSanitizer\Native\InputSanitizerBootstrapper
+     * @var InputSanitizerBootstrapper
      */
     protected static $instance;
 
     /**
      * Constructor.
      *
-     * @param \Acid\InputSanitizer\Native\InputSanitizerBootstrapper $bootstrapper
+     * @param InputSanitizerBootstrapper $bootstrapper
      */
     public function __construct(InputSanitizerBootstrapper $bootstrapper = null)
     {
@@ -58,7 +57,7 @@ class InputSanitizer
     /**
      * Creates a new Native Bootstrapper instance.
      *
-     * @param \AcidSolutions\InputSanitizer\Native\InputSanitizerBootstrapper $bootstrapper
+     * @param InputSanitizerBootstrapper $bootstrapper
      *
      * @return void
      */
@@ -82,7 +81,6 @@ class InputSanitizer
     public static function __callStatic($method, $args)
     {
         $instance = static::instance()->getInputSanitizer();
-
         switch (count($args)) {
             case 1:
                 return $instance->{$method}($args[0]);
