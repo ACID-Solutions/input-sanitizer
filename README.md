@@ -23,7 +23,7 @@ composer require acid-solutions/input-sanitizer
 
 ## Laravel users
 
-- Laravel 5.5+ uses Package Auto-Discovery, so doesn't require you to manually add the ServiceProvider.
+- Laravel 5.5+ uses Package Auto-Discovery, so doesn't require you to manually add the ServiceProvider and the Facade alias.
 If you don't use auto-discovery or if you use a Laravel 5.4- version, add the package service provider in the `register()` method from your `app/Providers/AppServiceProvider.php` :
 
 ```php
