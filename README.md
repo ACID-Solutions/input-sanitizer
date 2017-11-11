@@ -14,41 +14,26 @@ This package simplifies the process drastically.
 
 ## Installation
 
-Begin by installing this package through Composer.
+- Install the package with composer :
 
 ```bash
 composer require acid-solutions/input-sanitizer
 ```
 
-```json
-{
-    "require": {
-        "ACID-Solutions/input-sanitizer": "1.*"
-    }
-}
-```
+## Laravel users
 
-## Laravel Users
-
-If you are a Laravel user, there is a service provider you can make use of to automatically prepare the bindings and
-such.
-
-In the `$providers` array add the following service provider for this package.
+- Laravel 5.5+ uses Package Auto-Discovery, so doesn't require you to manually add the ServiceProvider.
+If you don't use auto-discovery or if you use a Laravel 5.4- version, add the package service provider in the `register()` method from your `app/Providers/AppServiceProvider.php` :
 
 ```php
-// config/app.php
-
-'providers' => [
-    '...',
-    AcidSolutions\InputSanitizer\Laravel\InputSanitizerServiceProvider::class
-];
+// input sanitizer
+// https://github.com/ACID-Solutions/input-sanitizer
+$this->app->register(AcidSolutions\InputSanitizer\Laravel\InputSanitizerServiceProvider::class);
 ```
 
-In the `$aliases` array add the following facade for this package.
+- Then, add the package facade alias in the `$aliases` array from the `config/app.php`config file.
 
 ```php
-// config/app.php
-
 'aliases' => [
     '...',
     'InputSanitizer' => AcidSolutions\InputSanitizer\Laravel\Facades\InputSanitizer::class
@@ -61,20 +46,19 @@ When this provider is booted, you'll gain access to a `InputSanitizer` facade, w
 public function index()
 {
     $inputs = $request->all();
-    $sanitizedInputs = InputSanitizer::sanitize($inputs);
+    $sanitizedInputs = \InputSanitizer::sanitize($inputs);
 }
 ```
-
-> In Laravel, of course add `use InputSanitizer;` to the top of your controller.
 
 ## Without Laravel
 
 InputSanitizer ships with native implementations of the bootloader and facade. In order to use it import class.
 
 ```php
-// Import the facade
+// import the package facade
 use Acid\InputSanitizer\Native\Facades\InputSanitizer;
 
+// sanitize your entries
 $input = ['false', '3', ''];
 $sanitizedInput = InputSanitizer::sanitize($input);
 
