@@ -6,6 +6,7 @@
 [![Coverage Status](https://img.shields.io/scrutinizer/coverage/g/ACID-Solutions/input-sanitizer.svg?style=flat-square)](https://scrutinizer-ci.com/g/ACID-Solutions/input-sanitizer/code-structure)
 [![SensioLabsInsight](https://insight.sensiolabs.com/projects/3c577754-9101-4473-abb2-50155ed67282/small.png)](https://insight.sensiolabs.com/projects/3c577754-9101-4473-abb2-50155ed67282)
 [![Total Downloads](https://img.shields.io/packagist/dt/ACID-Solutions/input-sanitizer.svg?style=flat-square)](https://packagist.org/packages/ACID-Solutions/input-sanitizer)
+[![License: MIT](https://img.shields.io/badge/License-MIT-blue.svg)](https://opensource.org/licenses/MIT)
 
 Often when receiving data from a client in an API or from a form request, you'll find yourself running the same data
 cleaning operations such as transforming `'false'` to the boolean `false`, converting `''` to `null` etc. This can be a pain.
