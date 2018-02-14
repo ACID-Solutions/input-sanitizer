@@ -44,7 +44,10 @@
         "laravel": {
             "providers": [
                 "AcidSolutions\\InputSanitizer\\Laravel\\InputSanitizerServiceProvider"
-            ]
+            ],
+            "aliases": {
+                "InputSanitizer": "AcidSolutions\\InputSanitizer\\Laravel\\Facades\\InputSanitizer"
+            }
         }
     },
     "minimum-stability": "stable"
